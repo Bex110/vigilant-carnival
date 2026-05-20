@@ -11,9 +11,9 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --ink: #1a1a1a;
-      --paper: #f5f2ee;
-      --accent: #2a5c45;
+      --ink: #66B9BF;
+      --paper: #ffffff;
+      --accent: #29889B;
       --accent-light: #d4e8df;
       --mid: #6b6b6b;
       --border: #ddd9d3;
@@ -25,7 +25,7 @@
     body {
       font-family: 'Roboto', sans-serif;
       background: var(--paper);
-      color: var(--ink);
+      color: var(--accent);
       font-size: 16px;
       line-height: 1.6;
     }
@@ -39,14 +39,15 @@
       justify-content: space-between;
       align-items: center;
       padding: 1.25rem 5%;
-      background: var(--paper);
+      background: var(--ink);
       border-bottom: 1px solid var(--border);
     }
 
     .nav-logo {
       font-family: 'Roboto', serif;
-      font-size: 1.1rem;
-      color: var(--ink);
+      font-size: 1.2rem;
+      font-weight: 500;
+      color: var(--white);
       text-decoration: none;
       letter-spacing: -0.01em;
     }
@@ -58,9 +59,9 @@
     }
 
     .nav-links a {
-      font-size: 0.875rem;
+      font-size: 1.075rem;
       font-weight: 500;
-      color: var(--mid);
+      color: var(--white);
       text-decoration: none;
       letter-spacing: 0.02em;
       transition: color 0.2s;
@@ -141,7 +142,7 @@
     }
 
     .btn-primary {
-      background: var(--accent);
+      background: var(--white);
       color: var(--white);
     }
 
@@ -223,7 +224,7 @@
 
     /* ADDRESS */
     .address-section {
-      background: var(--ink);
+      background: var(--accent);
       color: var(--white);
       padding: 5rem 5%;
     }
@@ -242,7 +243,7 @@
       font-weight: 500;
       letter-spacing: 0.12em;
       text-transform: uppercase;
-      color: var(--accent-light);
+      color: var(--white);
       margin-bottom: 1rem;
     }
 
@@ -252,7 +253,7 @@
       font-size: 1.05rem;
       line-height: 2;
       font-weight: 300;
-      color: rgba(255,255,255,0.75);
+      color: var(--white);
     }
 
     .address-block strong {
@@ -318,79 +319,7 @@
     .contact-intro h2 { margin-bottom: 1rem; }
     .contact-intro p { color: var(--mid); font-weight: 300; line-height: 1.8; }
 
-    .form-card {
-      background: var(--white);
-      border-radius: 6px;
-      padding: 2.5rem;
-      border: 1px solid var(--border);
-      box-shadow: 0 4px 24px rgba(0,0,0,0.04);
-    }
-
-    .form-group { margin-bottom: 1.25rem; }
-
-    label {
-      display: block;
-      font-size: 0.8rem;
-      font-weight: 500;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      color: var(--mid);
-      margin-bottom: 0.5rem;
-    }
-
-    input, textarea, select {
-      width: 100%;
-      padding: 0.85rem 1rem;
-      border: 1.5px solid var(--border);
-      border-radius: 3px;
-      font-size: 0.95rem;
-      font-family: 'Roboto', sans-serif;
-      color: var(--ink);
-      background: var(--paper);
-      transition: border-color 0.2s, box-shadow 0.2s;
-      outline: none;
-    }
-
-    input:focus, textarea:focus, select:focus {
-      border-color: var(--accent);
-      box-shadow: 0 0 0 3px rgba(42,92,69,0.08);
-    }
-
-    textarea { height: 130px; resize: vertical; }
-
-    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
-
-    .submit-btn {
-      width: 100%;
-      padding: 1rem;
-      background: var(--accent);
-      color: var(--white);
-      border: none;
-      border-radius: 3px;
-      font-size: 0.95rem;
-      font-weight: 500;
-      font-family: 'Roboto', sans-serif;
-      cursor: pointer;
-      transition: all 0.2s;
-      margin-top: 0.5rem;
-      letter-spacing: 0.02em;
-    }
-
-    .submit-btn:hover { background: #1e4433; transform: translateY(-1px); }
-    .submit-btn:active { transform: translateY(0); }
-
-    .success-msg {
-      display: none;
-      text-align: center;
-      padding: 2rem;
-      color: var(--accent);
-    }
-
-    .success-msg h3 {
-      font-family: 'Roboto', serif;
-      font-size: 1.5rem;
-      margin-bottom: 0.5rem;
-    }
+ 
 
     /* FOOTER */
     footer {
@@ -427,39 +356,12 @@
 <body>
 
   <nav>
-    <a class="nav-logo" href="#">Plastic Company Ltd</a>
+    <a class="nav-logo" href="#">Plastic Promotions Ltd</a>
     <ul class="nav-links">
-      <li><a href="#about">About</a></li>
       <li><a href="#find-us">Find Us</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
-
-  <!-- HERO -->
-  <section class="hero">
-    <div class="hero-inner">
-      <span class="hero-tag">Established in the UK</span>
-      <h1>Plastic<br>Company Ltd</h1>
-      <p class="hero-sub">Quality plastic products and solutions. Get in touch to find out how we can help with your requirements.</p>
-      <div class="btn-group">
-        <a href="#contact" class="btn btn-primary">Get in touch</a>
-        <a href="#about" class="btn btn-outline">Learn more</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ABOUT -->
-  <section class="about" id="about">
-    <div>
-      <p class="about-label">About us</p>
-      <h2>Who we are</h2>
-      <p class="about-text">Plastic Company Ltd has been delivering high-quality plastic products to businesses across the UK. We pride ourselves on reliability, quality, and customer service.</p>
-      <p class="about-text">Replace this text with a short description of what makes your business different — your experience, your specialisms, or your values.</p>
-    </div>
-    <div class="about-visual">
-      <span class="about-visual-text">PCL</span>
-    </div>
-  </section>
 
   <!-- ADDRESS -->
   <section class="address-section" id="find-us">
@@ -468,43 +370,16 @@
         <p class="address-label">Find us</p>
         <h2>Where we are</h2>
         <div class="address-block">
-          <strong>Plastic Company Ltd</strong>
-          1 Plastic Road<br>
-          Industrial Estate<br>
-          Town<br>
-          County<br>
-          XX1 1XX
+          <strong>Plastic Promotions Ltd</strong>
+          13 Halfpenny Valley Industrial Estate<br>
+          Lurgan<br>
+          Craigavon<br>
+          BT66 8TP
         </div>
       </div>
-      <div class="address-details">
-        <div class="address-item">
-          <div class="address-icon">📍</div>
-          <div class="address-item-text">
-            <strong>Address</strong>
-            1 Plastic Road, Industrial Estate, Town, County, XX1 1XX
-          </div>
-        </div>
-        <div class="address-item">
-          <div class="address-icon">📞</div>
-          <div class="address-item-text">
-            <strong>Phone</strong>
-            +44 (0) 1234 567890
-          </div>
-        </div>
-        <div class="address-item">
-          <div class="address-icon">✉️</div>
-          <div class="address-item-text">
-            <strong>Email</strong>
-            hello@plasticcompany.co.uk
-          </div>
-        </div>
-        <div class="address-item">
-          <div class="address-icon">🕐</div>
-          <div class="address-item-text">
-            <strong>Hours</strong>
-            Monday – Friday, 9am – 5pm
-          </div>
-        </div>
+      <div class="Map">
+        <div class = "address-item"><br></div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3774.783858080312!2d-6.364266823199642!3d54.458926572632876!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4860f006a1244f75%3A0x4024249fdf9d071e!2sPlastic%20Promotions%20Ltd!5e1!3m2!1sen!2suk!4v1779284937971!5m2!1sen!2suk" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </div>
   </section>
@@ -514,79 +389,15 @@
     <div class="contact-intro">
       <p class="about-label">Contact</p>
       <h2>Get in touch</h2>
-      <p>Have a question or want to work with us? Fill in the form and we'll get back to you as soon as possible.</p>
+      <p>Have a question? Fill in the form and we'll get back to you as soon as possible.</p>
     </div>
-    <div class="form-card">
-      <form id="contact-form">
-        <div class="form-row">
-          <div class="form-group">
-            <label for="first-name">First name</label>
-            <input type="text" id="first-name" placeholder="Jane" required />
-          </div>
-          <div class="form-group">
-            <label for="last-name">Last name</label>
-            <input type="text" id="last-name" placeholder="Smith" required />
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="email">Email address</label>
-          <input type="email" id="email" placeholder="jane@example.com" required />
-        </div>
-        <div class="form-group">
-          <label for="company">Company (optional)</label>
-          <input type="text" id="company" placeholder="Your company" />
-        </div>
-        <div class="form-group">
-          <label for="message">Message</label>
-          <textarea id="message" placeholder="Tell us what you need..." required></textarea>
-        </div>
-        <button type="submit" class="submit-btn">Send message →</button>
-      </form>
-      <div class="success-msg" id="success-msg">
-        <h3>Message sent!</h3>
-        <p>Thanks for getting in touch. We'll be back to you shortly.</p>
-      </div>
-    </div>
+      <iframe class="airtable-embed" src="https://airtable.com/embed/appR09xlQkCn7izNY/pag0N05WGHEIkzhrl/form" frameborder="0" onmousewheel="" width="100%" height="533" style="background: transparent; border: 1px solid #ccc;"></iframe>
   </section>
 
   <footer>
-    <span>© 2026 Plastic Company Ltd. All rights reserved.</span>
-    <span>1 Plastic Road, Town, XX1 1XX</span>
+    <span>© 2026 Plastic Promotions Ltd</span>
+    <span>13 Halfpenny Valley Industrial Estate, Lurgan, Craigavon, BT66 8TP</span>
   </footer>
-
-  <script>
-    document.getElementById('contact-form').addEventListener('submit', function(e) {
-      e.preventDefault();
-
-      // When you're ready to connect to Airtable, replace this with your webhook URL
-      const AIRTABLE_WEBHOOK = ''; // e.g. https://hooks.airtable.com/...
-
-      const data = {
-        firstName: document.getElementById('first-name').value,
-        lastName: document.getElementById('last-name').value,
-        email: document.getElementById('email').value,
-        company: document.getElementById('company').value,
-        message: document.getElementById('message').value,
-        submittedAt: new Date().toISOString()
-      };
-
-      if (AIRTABLE_WEBHOOK) {
-        fetch(AIRTABLE_WEBHOOK, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(data)
-        }).then(() => showSuccess()).catch(() => showSuccess());
-      } else {
-        // No webhook yet — just show success for now
-        showSuccess();
-      }
-    });
-
-    function showSuccess() {
-      document.getElementById('contact-form').style.display = 'none';
-      document.getElementById('success-msg').style.display = 'block';
-    }
-  </script>
 
 </body>
 </html>
