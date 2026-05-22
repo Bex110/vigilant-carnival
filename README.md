@@ -1,2 +1,2 @@
 # vigilant-carnival
-Static Website with information regarding a Plastic Manufacturing Limited company with an enquiry form.
+Static Website with information regarding Plastic Promotions Ltd with an enquiry form.
